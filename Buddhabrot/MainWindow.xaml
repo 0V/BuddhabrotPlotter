@@ -49,7 +49,6 @@
 
     <DockPanel>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="6">
-            <Button Height="30" Width="80" Margin="20,3" Content="Start" Command="{Binding StartCalculateCommand}"></Button>
             <Label Content="R"></Label>
             <TextBox Text="{Binding ColorR,Mode=TwoWay}"></TextBox>
             <Label Content="G"></Label>
@@ -73,6 +72,8 @@
             <Label Content="each px" Margin="10,0,0,0"></Label>
             <CheckBox IsChecked="{Binding DoAllPixel}" Margin="0,10"/>
         </StackPanel>
+        <Button HorizontalAlignment="Right" Height="100" Width="60" Margin="10" Content="Start" Command="{Binding StartCalculateCommand}"></Button>
+
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
             <Label Content="Image :"></Label>
             <TextBox Text="{Binding SaveFileName,Mode=TwoWay}" Width="300"></TextBox>
@@ -81,7 +82,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
-            <Label Content="Matrix :"></Label>
+            <Label Content="Matrix : "></Label>
             <TextBox Text="{Binding SaveMatrixName,Mode=TwoWay}" Width="300"></TextBox>
             <Label Content=".csv"></Label>
             <Button Height="30" Width="80" Margin="6" VerticalAlignment="Bottom" Content="Save Matrix" Command="{Binding SaveMatrixCommand}"></Button>

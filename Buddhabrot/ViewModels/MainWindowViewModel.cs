@@ -26,12 +26,12 @@ namespace Buddhabrot.ViewModels
             ColorR = 255;
             ColorG = 255;
             ColorB = 255;
-            ColorAlpha = 1;
+            ColorAlpha = 3;
             SaveFileName = "buddhabrot";
             SaveMatrixName = "buddhabrot";
             ImagePixelWidth = 500;
             ImagePixelHeight = 500;
-            Iteration = 100;
+            Iteration = 10000;
             ColorAlphaThreshold = 0;
             PlotCount = 100000;
             DoAllPixel = false;
