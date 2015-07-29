@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatToPng", "MatToPng\MatToPng.csproj", "{717CCECD-B0AD-4446-AB7A-4D679DB6BD3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateBuddhabrot", "CalculateBuddhabrot\CalculateBuddhabrot.csproj", "{DB7179DB-DD04-41C1-9C55-86A3307D7E7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{717CCECD-B0AD-4446-AB7A-4D679DB6BD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717CCECD-B0AD-4446-AB7A-4D679DB6BD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717CCECD-B0AD-4446-AB7A-4D679DB6BD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717CCECD-B0AD-4446-AB7A-4D679DB6BD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7179DB-DD04-41C1-9C55-86A3307D7E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7179DB-DD04-41C1-9C55-86A3307D7E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7179DB-DD04-41C1-9C55-86A3307D7E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7179DB-DD04-41C1-9C55-86A3307D7E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
