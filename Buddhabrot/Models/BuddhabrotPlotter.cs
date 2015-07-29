@@ -13,6 +13,8 @@ namespace Buddhabrot.Models
     {
         public int PixelHeight { get; set; }
         public int PixelWidth { get; set; }
+        public double DpiX { get; set; }
+        public double DpiY { get; set; }
 
         public double AlphaMagnification { get; set; }
 
@@ -20,10 +22,17 @@ namespace Buddhabrot.Models
 
         public Color PointColor { get; set; }
 
-        public BuddhabrotPlotter(int width,int height)
+        private void Initialize()
         {
+            DpiX = 640;
+            DpiY = 640;
             AlphaMagnification = 1;
             AlphaThreshold = 0;
+        }
+
+
+        public BuddhabrotPlotter(int width, int height)
+        {
             PixelWidth = width;
             PixelHeight = height;
             PointColor = Color.FromRgb(255, 255, 255);
@@ -31,8 +40,6 @@ namespace Buddhabrot.Models
 
         public BuddhabrotPlotter(int width, int height, Color color)
         {
-            AlphaMagnification = 1;
-            AlphaThreshold = 0;
             PixelWidth = width;
             PixelHeight = height;
             PointColor = color;
@@ -143,7 +150,8 @@ namespace Buddhabrot.Models
             var height = pixel.GetLength(1);
             return Task.Run<WriteableBitmap>(() =>
             {
-                var tmpImage = new WriteableBitmap(width, height, 1, 1, PixelFormats.Bgra32, null);
+                var tmpImage = new WriteableBitmap(width, height, DpiX, DpiY, PixelFormats.Bgra32, null);
+
                 unsafe
                 {
                     tmpImage.Lock();
