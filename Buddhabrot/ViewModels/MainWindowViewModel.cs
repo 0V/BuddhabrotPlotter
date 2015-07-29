@@ -332,14 +332,6 @@ namespace Buddhabrot.ViewModels
         public bool CanSaveImage()
         {
             return true;
-            /*            if (MainImage == null || IsRunning || string.IsNullOrWhiteSpace(SaveFileName))
-                        {
-                            return false;
-                        }
-                        else
-                        {
-                            return true;
-                        }*/
         }
 
         public async void SaveImage()
@@ -349,12 +341,6 @@ namespace Buddhabrot.ViewModels
                 Messenger.Raise(new InformationMessage("保存する画像がありません。", "エラー", MessageBoxImage.Error, "Info"));
                 return;
             }
-            /*            else if (IsRunning)
-                        {
-                            Messenger.Raise(new InformationMessage("実行中は保存できません。", "エラー", MessageBoxImage.Error, "Info"));
-                            return;
-                        }
-            */
             else if (string.IsNullOrWhiteSpace(SaveFileName))
             {
                 Messenger.Raise(new InformationMessage("ファイル名を入力してください。", "エラー", MessageBoxImage.Error, "Info"));
@@ -449,7 +435,6 @@ namespace Buddhabrot.ViewModels
 
         public async void Calculate()
         {
-            MainImage = new WriteableBitmap(ImagePixelWidth, ImagePixelHeight, 96, 96, PixelFormats.Bgra32, null);
             var color = Color.FromRgb(ColorR, ColorG, ColorB);
             var p = new BuddhabrotPlotter(ImagePixelWidth, ImagePixelHeight, color);
             p.AlphaMagnification = ColorAlpha;

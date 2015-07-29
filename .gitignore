@@ -358,12 +358,7 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 
-FaceExchanger/bin/
-FaceExchanger/obj/
-FaceExchengeConsole/
-FaceExchanger/g2favi.ico
-FaceExchanger.v14.suo
-FaceExchanger.sln.ide/
 *.dll
 *.config
 *.XML
+work/
