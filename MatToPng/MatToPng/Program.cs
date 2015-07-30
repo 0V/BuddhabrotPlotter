@@ -63,6 +63,7 @@ namespace MatToPng
             byte ColorG = 255;
             byte ColorB = 255;
             int ColorAlpha = 1;
+            long AlphaThreshold = 0;
 
             Console.Write("Folder Name:");
             var folderName = Console.ReadLine();
@@ -79,6 +80,9 @@ namespace MatToPng
             {
                 ColorAlpha = 1;
             }
+
+            Console.Write("A (Threashold):");
+            var tmpThreshold = Console.ReadLine();
 
             Console.Write("R:");
             var tmpR = Console.ReadLine();
@@ -98,6 +102,10 @@ namespace MatToPng
             if (!byte.TryParse(tmpB, out ColorB))
             {
                 ColorB = 255;
+            }
+            if (!long.TryParse(tmpThreshold, out AlphaThreshold))
+            {
+                AlphaThreshold = 0;
             }
 
 
@@ -124,6 +132,7 @@ namespace MatToPng
 
             var p = new BuddhabrotPlotter(ImagePixelWidth, ImagePixelHeight, color);
             p.AlphaMagnification = ColorAlpha;
+            p.AlphaThreshold = AlphaThreshold;
 
             FileSaver.SaveMatrix(pixelMatrix, folderName + "/" + folderName + ".csv").Wait();
             Console.Write("Mat Saved   ");

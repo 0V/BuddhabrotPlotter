@@ -99,7 +99,7 @@ namespace Buddhabrot.Models
                 {
                     x = 0;
                     var points = line.Split(',');
-                    foreach (var p in points.Where(_=>!string.IsNullOrWhiteSpace(_)))
+                    foreach (var p in points.Where(_ => !string.IsNullOrWhiteSpace(_)))
                     {
                         pixels[x, y] = Convert.ToInt64(p);
                         x++;

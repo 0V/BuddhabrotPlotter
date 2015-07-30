@@ -33,6 +33,7 @@ namespace Buddhabrot.Models
 
         public BuddhabrotPlotter(int width, int height)
         {
+            Initialize();
             PixelWidth = width;
             PixelHeight = height;
             PointColor = Color.FromRgb(255, 255, 255);
@@ -40,6 +41,7 @@ namespace Buddhabrot.Models
 
         public BuddhabrotPlotter(int width, int height, Color color)
         {
+            Initialize();
             PixelWidth = width;
             PixelHeight = height;
             PointColor = color;
@@ -167,7 +169,7 @@ namespace Buddhabrot.Models
                             p[1] = PointColor.G;
                             p[2] = PointColor.R;
                             p[3] = 0;
-                            long alpha = (long)(pixel[x, y] * AlphaMagnification) - AlphaThreshold;
+                            long alpha = (long)((pixel[x, y] - AlphaThreshold) * AlphaMagnification);
 
                             if (alpha > 255) alpha = 255;
                             if (alpha < 0) alpha = 0;
