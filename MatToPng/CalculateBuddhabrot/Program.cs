@@ -38,10 +38,12 @@ namespace CalculateBuddhabrot
 
             var date = DateTime.Now.ToString("yyyyMMddHHmmss");
             var fileSafix = "result/" + date + "_" + Iteration + "_" + PlotCount;
+            if (!Directory.Exists("result")) Directory.CreateDirectory("result"); ;
+
+
             int ColorAlpha = 1;
 
             var color = Color.FromRgb(ColorR, ColorG, ColorB);
-
 
 
             for (int i = 0; i < count; i++)
